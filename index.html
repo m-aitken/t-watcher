@@ -1,9 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   <title>T-Watcher App</title>
 </head>
 <body>
+<div class="container">
+  <div class="row">
+      
+    <div class="col-xs-12">
+      <img id="header" class="center-block" src="./Resources/Combo_Logo_All/Screen/Black/Combo_Black_RGB.png" alt="" />
+    </div>
 
+    <div class="col-xs-12">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8" id="icon">
+          <span class="all-status-btn button"><p class="all">&#x25C9; <span class="txt">RESET</span></p></span>
+          <span class="online-status-btn button"><p class="online">&#x25C9; <span class="txt">ONLINE</span></p></span>
+          <span class="offline-status-btn button"><p class="offline">&#x25C9; <span class="txt">OFFLINE</span></p></span>
+          <input id="searchTerm" maxlength="50" autofocuse="autofocus" dir="auto" autocomplete="off">
+          <button id="search-btn">SEARCH</button>
+        </div>
+        <div class="col-xs-2"></div>
+    </div>
+    
+    
+    <div class="col-xs-12">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8" id="results">   
+        </div>
+        <div class="col-xs-2"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  <footer id="footer">
+    <p id="foot">MA @ GA 2017</p>
+  </footer>
 </body>
 </html>

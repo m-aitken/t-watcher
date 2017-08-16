@@ -1,0 +1,224 @@
+/*CSS FOR FOOTER */
+
+#header {
+  padding: 3%;
+  width: 50%;
+  margin: 0 auto;
+}
+
+body {
+  background-color: rgba(100, 65, 165, .8);
+  font-family: 'Press Start 2P', cursive;
+}
+
+#footer {
+  height: 30px;
+  bottom: 0;
+}
+
+
+/*CSS FOR ICON AND SEARCH */
+
+
+
+#icon {
+  background-color: rgba(238, 238, 238, 1);
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.online,
+.offline,
+.all{
+  font-size: 20px;
+  display: inline-block;
+  width: 30%;
+}
+
+.online-t,
+.offline-t{
+  font-size: 15px;
+  display: inline-block;
+  width: 5%;
+  text-align: center;
+}
+
+.txt {
+  font-size: 13px;
+}
+
+.online,
+.online-t {
+  color: green;
+}
+
+.offline,
+.offline-t {
+  color: red;
+}
+
+
+.button {
+  background: none;
+  font-size: 1.5em;
+  border: none;
+  cursor: pointer;
+  padding: .5% 0;
+  position: relative;
+}
+
+.button:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 4px;
+  background-color: rgba(100, 65, 165, .8);
+  content: "";
+  transition: width 0.2s;
+}
+
+.button:hover {
+  color: rgba(100, 65, 165, .8);
+}
+
+.button:hover:after {
+  width: 100%;
+}
+
+.button:focus {
+  outline-style: none;
+}
+
+#searchTerm{
+  margin-bottom: 5px;
+  width: 100%;
+  border-radius: 3px;
+}
+
+#search-btn{
+  width: 100%;
+  font-size: .8em;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+
+
+
+/*CSS FOR RESULTS */
+
+#results {
+  background-color: rgba(238, 238, 238, 1);
+  border-radius: 3px;
+  margin-top: 1.5%;
+  padding-top: 15px;
+  display: inline-block;
+}
+
+.online_streamer, .offline_streamer {
+  transition: box-shadow 0.5s, transform 0.2s;
+}
+
+.online_streamer:hover{
+  border-radius: 1px;
+  padding: 5px;
+  box-shadow:0 0 0 4px rgba(39, 77, 28, .2);
+}
+
+.offline_streamer:hover{
+  border-radius: 1px;
+  padding: 5px;
+  box-shadow:0 0 0 4px rgba(160, 16, 48, .2);
+}
+
+
+
+#streamname {
+  display: inline-block;
+  padding-left: 8px;
+}
+
+hr {
+  border-bottom: 1px solid rgba(140,139,139,.4);
+  margin: 0 auto;
+}
+
+#status,
+#status-game{
+  font-size: 1rem;
+  rgba(100, 65, 165, .8)
+}
+
+
+#streamerlogo {
+  width: 10%;
+  box-shadow: -2px 3px rgba(136, 136, 136, .8);
+  border: 1px solid rgba(136, 136, 136, .5);
+  margin: 1% 0;
+  padding-bottom: 10x;
+}
+a{
+  color: rgba(100, 65, 165, 1);
+}
+
+.online_streamer,
+.offline_streamer {
+  padding: 10px 2.5px;
+}
+
+/*CSS FOR LIGHTBOX */
+.background{
+  position: fixed;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left:0%;
+  background: rgba(0,0,0,0.5);
+  z-index: 50;
+}
+
+.box{
+  position: fixed;
+  height: 50%;
+  width:50%;
+  top: 25%;
+  left:25%;
+  z-index: 51;
+  display: block;
+  box-shadow: 0 0 0 2.5px rgba(238, 238, 238, 1);
+  border-radius: 1px;
+  color: rgba(100, 65, 165, 1);
+  background: rgba(255,255,255,.8);
+}
+
+.iframe{
+  height: 86%;
+}
+
+.exit{
+  text-align: right;
+  cursor: pointer;
+}
+
+.iframe_streamer_info {
+  font-size: 10px;
+}
+#info, #info-p{
+  width: 50%;
+  display: inline-block;
+}
+
+#info-p{
+  text-align: right;
+}
+
+#foot{
+  margin-top: 5px;
+  text-align: center;
+  font-size: 9px;
+}
+

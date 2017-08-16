@@ -6,7 +6,7 @@ $(document).ready(function() {
   var stream = url + "streams/";
   var channel = url + "channels/";
   var user = url + "users/";
-  var streamer = "timthetatman";
+  var streamer = "zybisko";
   var follows_channels = "/follows/channels";
   var get_followers = user + streamer + follows_channels + client_id;
   var following = [];
@@ -81,11 +81,6 @@ $(document).ready(function() {
     $('#searchTerm').val('');
   });
       following.push('esl_overwatch');
-      following.push('gamesdonequick');
-      following.push('freecodecamp');
-      following.push('lirik');
-      following.push('mendokusaii');
-      following.push('obliviously_chaotic');
       following.push(streamer);
 
       /// for each -- adds streamers to body looping through follows array

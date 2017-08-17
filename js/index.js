@@ -11,7 +11,7 @@ $(document).ready(function() {
   var get_followers = user + streamer + follows_channels + client_id;
   var following = [];
 
-  //adding names to following array
+  //adding names to 'following' array
   $.getJSON(get_followers, function(followers) {
     for (var i = 0; i < followers.follows.length; i++) {
       var displayName = followers.follows[i].channel.display_name;
@@ -20,7 +20,7 @@ $(document).ready(function() {
 
   $("#search-btn").click(function() {
     var searchTerm = $('#searchTerm').val();
-    var url = user +searchTerm+client_id;
+    var url = user + searchTerm + client_id;
 
     $.ajax({
       type: "GET",
@@ -28,10 +28,10 @@ $(document).ready(function() {
       contentType: "application/json; charset=utf-8",
       async: false,
       dataType: "json",
-      success: function(data) {
+      success: function(data) { // successful search requires exact name match
         var name = data.name;
         console.log(name);
-        var xstream=stream+data.name+client_id;
+        var xstream = stream + data.name + client_id;
         $.getJSON(xstream, function(data2){
           var online_status = data2.stream;
           var streamer_logo = data.logo;
@@ -46,7 +46,7 @@ $(document).ready(function() {
             var currently_playing = "STREAMER IS CURRENTLY OFFLINE";
             $("#results").prepend('<div class="offline_streamer"><span class="streamerlogo"><img id="streamerlogo" src="' + streamer_logo + '"></span><p class="statusIcon offline-t">&#x25C9;</p><h5 id="streamname"><a target="_blank" href="' + streamer_url + '">' + streamer_name + '</a></h5><hr/><p id="status">' + currently_playing + '</p></div>');
           }
-          
+            // Twitch video player
             $('.online_streamer').click(function(event) {
             var id = $(this).attr('id');
             if (id === name) {
@@ -72,7 +72,7 @@ $(document).ready(function() {
         });
 
       },
-      error: function(errorMessage) {
+      error: function(errorMessage) { // error alert for search failure
         console.log(errorMessage);
         alert(searchTerm + " not found! Check spelling and try again.");
       }
@@ -82,7 +82,7 @@ $(document).ready(function() {
       following.push('esl_overwatch');
       following.push(streamer);
 
-      /// for each -- adds streamers to body looping through follows array
+      // for each -- adds streamers to body looping through 'follows' array
       following.forEach(function(streamer) {
         var streaming_info = stream + streamer + client_id;
         var channel_info = channel + streamer + client_id;
@@ -104,7 +104,7 @@ $(document).ready(function() {
             $("#results").prepend('<div class="offline_streamer"><span class="streamerlogo"><img id="streamerlogo" src="' + streamer_logo + '"></span><p class="statusIcon offline-t">&#x25C9;</p><h5 id="streamname"><a target="_blank" href="' + streamer_url + '">' + streamer_name + '</a></h5><hr/><p id="status">' + currently_playing + '</p></div>');
           }
 
-          ///adds twitch stream 
+          //adds twitch stream viewer
           $('.online_streamer').click(function(event) {
             var id = $(this).attr('id');
             if (id === streamer) {
@@ -127,14 +127,15 @@ $(document).ready(function() {
 
           });
 
-        }); ///end of .done
+        }); //end of .done
 
-      }); ///end of for.each
+      }); //end of for.each
 
-    }) ///end of followers getJSON-followers
+    }) //end of followers getJSON-followers
 
 });
-/// for buttons
+
+// display buttons
 $(document).ready(function() {
   $(".all-status-btn").click(function() {
     $(".offline_streamer").show();
@@ -153,10 +154,11 @@ $(document).ready(function() {
 
 });
 
-  $(document).ready(function() {
-    $("#searchTerm").keydown(function(enter) {
-      if (enter.which == 13) {
-        $("#search-btn").click();
-      }
-    });
+// execute search-btn click event when 'enter' keypress detected on searchTerm
+$(document).ready(function() {
+  $("#searchTerm").keydown(function(enter) {
+    if (enter.which == 13) {
+      $("#search-btn").click();
+    }
   });
+});

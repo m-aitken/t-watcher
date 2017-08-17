@@ -30,13 +30,16 @@ $(document).ready(function() {
       dataType: "json",
       success: function(data) { // successful search requires exact name match
         var name = data.name;
+        var t_url = "http://www.twitch.tv/";
+        console.log(data);
         console.log(name);
         var xstream = stream + data.name + client_id;
         $.getJSON(xstream, function(data2){
           var online_status = data2.stream;
           var streamer_logo = data.logo;
           var streamer_name = data.display_name;
-          var streamer_url = data.url;
+          var streamer_url = t_url + data.name;
+          console.log(data2);
           
           if (online_status != null) {
             console.log('connected and online!');

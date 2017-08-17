@@ -24,9 +24,8 @@ To aid this I've referenced Google Font 'Press Start 2P' (stylised as old font u
 *BootstrapCSS has been referenced for use in creating the layout(grid/columns) and styling(e.g. buttons).
 *I've included 'Animate.css' library for a special effect on the main logo. 
 
-*My code utilises the jQuery library, making use of ajax calls to dynamically display content on my main page.
+*My code utilises the jQuery library, making use of ajax requests to update content on my main page.
 
 
 ---
 
-*Inspiration for the layout -

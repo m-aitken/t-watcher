@@ -1,6 +1,6 @@
 $(document).ready(function() {
   var x = "?client_id=";
-  var y = "4efpapu4jb08n2u95amf0wmz6o3rfp";
+  var y = "3r943mtt26h5tdtla4tnn09axas1x3";
   var client_id = x + y;
   var url = "https://api.twitch.tv/kraken/";
   var stream = url + "streams/";
@@ -13,12 +13,12 @@ $(document).ready(function() {
 
   //adding names to following array
   $.getJSON(get_followers, function(followers) {
-      for (var i = 0; i < followers.follows.length; i++) {
-        var displayName = followers.follows[i].channel.display_name;
-        following.push(displayName);
+    for (var i = 0; i < followers.follows.length; i++) {
+      var displayName = followers.follows[i].channel.display_name;
+      following.push(displayName);
+    }
 
-      }
- $("#search-btn").click(function() {
+  $("#search-btn").click(function() {
     var searchTerm = $('#searchTerm').val();
     var url = user +searchTerm+client_id;
 
@@ -70,7 +70,6 @@ $(document).ready(function() {
           });
           
         });
-
 
       },
       error: function(errorMessage) {

@@ -21,11 +21,11 @@ To aid this I've referenced Google Font 'Press Start 2P' (stylised as old font u
 
 **Technologies used:
 
-*BootstrapCSS has been referenced for use in creating the layout(grid/columns) and styling(e.g. buttons).
+*Twitch API, freely provided at their Developer Portal.
+*BootstrapCSS has been referenced for use in creating the layout and styling(e.g. buttons).
 *I've included 'Animate.css' library for a special effect on the main logo. 
-
+*Custom font'Press Start 2P' referenced from Google Fonts 
 *My code utilises the jQuery library, making use of ajax requests to update content on my main page.
-
 
 ---
 
